@@ -1,1 +1,31 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Banking Application</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Welcome to Your Bank</h1>
+        <p>Current Balance: ${{ balance }}</p>
+
+        <form action="/deposit" method="post">
+            <label for="deposit">Deposit Amount:</label>
+            <input type="number" name="amount" id="deposit" required>
+            <button type="submit">Deposit</button>
+        </form>
+
+        <form action="/withdraw" method="post">
+            <label for="withdraw">Withdraw Amount:</label>
+            <input type="number" name="amount" id="withdraw" required>
+            <button type="submit">Withdraw</button>
+        </form>
+
+        <a href="/statement"><button>Get Statement</button></a>
+    </div>
+</body>
+</html>
 
